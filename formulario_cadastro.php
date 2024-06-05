@@ -31,7 +31,7 @@
                 <a href=""><button type="submit">Cadastrar</button></a>
             </div>
             <div class="form-group">
-                <a href=""><button type="button" class="back-button" onclick="index.php()">Voltar</button></a>
+                <a href="index.php"><button type="button">Voltar</button></a>
             </div>
         </form>
     </div>

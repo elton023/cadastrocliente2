@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $descricao = $_POST["descricao"];
 
     // sql para inserir os dados coletados na tabela clientes
-    $sql = "INSERT INTO clientes (nome, email, telefone, descricao) VALUES ('$nome', '$email', '$telefone', '$descricao')";
+    $sql = "INSERT INTO cliente (nome, email, telefone, descricao) VALUES ('$nome', '$email', '$telefone', '$descricao')";
 
     if($conn->query($sql) === TRUE) {
         echo "Cadastro realizado com sucesso!";
