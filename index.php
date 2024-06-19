@@ -7,6 +7,6 @@
 </head>
 <body>
     <a href="formulario_cadastro.php"><button>Cadastro</button></a>
-    <a href=""><button>Cliente</button></a>
+    <a href="clientes.php"><button>Cliente</button></a>
 </body>
 </html>

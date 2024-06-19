@@ -35,8 +35,55 @@
         $novo_descricao = $_POST["descricao"];
 
         //atualizar os dados do cliente no banco de dados
-        $sql = "UPDATE cliente SET nome = '&novo_nome', email ='$novo_email', telefone = '$novo_telefone', descricao '$novo_descricao' WHERE id = $cliente_id";
-    }
+        $sql = "UPDATE cliente SET nome = '$novo_nome', email ='$novo_email', telefone = '$novo_telefone', descricao = '$novo_descricao' WHERE id = $cliente_id";
+        
+        if($conn->query($sql) === TRUE){
+            echo "Dados atualizados com sucesso !";
+
+        }else{
+            echo "Erro ao atualizar os dados:" . $conn->erro;
+        }
+
 
     }
+
+    $conn->close();
+    }   else{
+            echo "Cliente nao especificado para a edição";
+            exit;
+    
+
+        }
+?>        
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form action=""method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="<?php echo $row ["nome"]; ?>" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<?php echo $row ["email"]; ?>" required><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" value="<?php echo $row ["telefone"]; ?>" required><br>
+
+    <label for="descricao">Descrição</label>
+    <input type="text" id="descricao" name="descricao" value="<?php echo $row ["descricao"]; ?>" required><br>
+
+    <input type="submit" value="Salvar Alterações">
+    </form>
+    
+    <br><a href="/Cadastrar/">Voltar</a>
+
+    
+</body>
+</html>
         

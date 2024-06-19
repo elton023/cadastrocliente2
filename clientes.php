@@ -48,7 +48,7 @@
         echo "<td>";
         echo "<a href='editar_cliente.php?id=". $row["id"] ."'>Editar</a>";
         echo "|";
-        echo "<a href='excluir_cliente.php?id=". $row["id"] ."'>Editar</a>";
+        echo "<a href='excluir_cliente.php?id=". $row["id"] ."'>Excluir</a>";
         echo "</td";
         echo "<tr>";
 
