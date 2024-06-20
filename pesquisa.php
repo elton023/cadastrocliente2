@@ -13,7 +13,7 @@ if ($conn->connect_error){
     }
 
 $termo = $_GET["termo"];
-$sql = "SELECT * FROM cliente WHERE nome LIKE '%termo%' OR email LIKE '%termo%' OR telefone LIKE '%termo%' OR descricao LIKE '%termo%'"; 
+$sql = "SELECT * FROM cliente WHERE nome LIKE '%$termo%' OR email LIKE '%$termo%' OR telefone LIKE '%$termo%' OR descricao LIKE '%$termo%'"; 
 
 $result = $conn->query($sql);
 
